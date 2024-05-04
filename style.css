@@ -21,11 +21,9 @@ html{
     font-family: 'Ubuntu', sans-serif;
     z-index: 999;
     transition: all 0.3s ease;
+    background: linear-gradient(to right, aliceblue, #082f51);
 }
-.navbar.sticky{
-     background: rgb(38, 114, 181);
-     padding: 15px 0;
-}
+
 .navbar .max-width{
     display: flex;
     align-items: center;
@@ -48,22 +46,20 @@ html{
     display: inline-block;
 }
 .navbar .menu li a{
-    color: aliceblue;
+    color: #082f51;
     font-size: 25px;
     font-weight: 500;
     margin-left: 20px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #082f51;
+    color: #fff;
 }
-.navbar.sticky .menu li a:hover{
-    color: aliceblue;
-}
+
 /*  Home   inicio  */
 .home{
     display: flex;
-    background: linear-gradient(to right, aliceblue, #082f51); /* Substitua as cores conforme desejado */
+    background: linear-gradient(to right, aliceblue, #082f51);
     background-size:cover;
     height: 100vh;
     color: rgb(0, 49, 92);
@@ -228,20 +224,86 @@ section .title::after{
     border-radius: 6px;
 }
 
-/* Estilo para a seção de Curiosidades */
-.skills {
-    background-color: #f4f4f4; /* Cor de fundo */
-    padding: 80px 0; /* Espaçamento interno */
-    text-align: center; /* Alinhamento do texto */
-    display: flex; /* Usando flexbox */
-    justify-content: center; /* Centralizando horizontalmente */
-    align-items: center; /* Centralizando verticalmente */
+/*sessão habilidades */
+
+.ability {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
 }
 
-.title {
+.ability-name {
     color: #333; /* Cor do título */
     margin-bottom: 40px; /* Espaçamento inferior */
 }
+
+.ability-content .ability-name {
+    font-size: 10px;
+    font-weight: 700;
+    color:#333;
+    text-transform: uppercase;
+    margin: 20px 0;
+
+}
+
+.ability-bar {
+    height: 14px;
+    background: #007bff;
+    border-radius: 3px;
+}
+
+.ability-per{
+    height: 14px;
+    background: #082f51;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.ability-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.ability-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f4f4f4;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+
+}
+
+/* Estilo para a seção de Curiosidades */
+.skills {
+    background-color: #f4f4f4; 
+    padding: 80px 0; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; /* Centralizando verticalmente */
+}
+
 
 /* Estilo para as setas */
 .column.left {
@@ -280,8 +342,8 @@ section .title::after{
 }
 
 img {
-    max-width: 100%; 
-    max-height: 100%; 
+    max-width: 70%; 
+    max-height: 70%; 
 }
 
 /*  sessão Contato  */
@@ -314,6 +376,17 @@ img {
     margin-left: 30px;
 }
 
+.contact .contact-content-left a {
+    text-decoration: none;
+    color: #333; 
+    font-weight:normal; 
+}
+
+.contact-content-left a:hover {
+    text-decoration: underline; 
+    color: #0056b3;
+}
+
 .contact .contact-content .row .info .head{
     font-weight: 500;
     color: #333;
@@ -337,6 +410,47 @@ img {
     width: 100%;
     height: 80px;
 }
+
+.contact .contact-content .arrow-link {
+    content: "";
+    background-image: url('img/seta.png'); /* URL da sua imagem */
+    background-size: cover;
+    width: 17px; /* Largura da imagem */
+    height: 17px; /* Altura da imagem */
+    display:inline-block; /* Para a imagem aparecer */
+    margin-left: 10px; /* Espaçamento à direita da seta */
+}
+
+.contact .contact-content .arrow-link:hover {
+    background-position: left center;
+}
+
+/*scrool */
+
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #0056b3;
+  }
+  
+  .scroll-to-top.show {
+    display: block;
+  }
 
 /*  sessão footer  */
 footer{

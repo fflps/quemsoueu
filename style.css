@@ -164,13 +164,14 @@ section .title::after{
     padding: 5px;
     transform: translateX(-50%);
 }
-.about, .skills, .contact, .mural, .footer{
+.about, .skills, .ability, .contact, .mural, .footer{
     font-family: url('https://fonts.googleapis.com/css2?family=Oswald&family=PT+Serif:ital,wght@0,700;1,700&family=Ubuntu&display=swap');
     font-size: 20px;
     line-height: 1.5;
 }
 .about .about-content,
 .skills .skills-content,
+.ability,
 .contact .contact-content,
 .mural .mural-content {
     display: flex;
@@ -226,11 +227,6 @@ section .title::after{
 
 /*sessão habilidades */
 
-.ability {
-    width: 100%;
-    max-width: 600px;
-    padding: 0 20px;
-}
 
 .ability-name {
     color: #333; /* Cor do título */
@@ -238,7 +234,7 @@ section .title::after{
 }
 
 .ability-content .ability-name {
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 700;
     color:#333;
     text-transform: uppercase;
@@ -247,24 +243,25 @@ section .title::after{
 }
 
 .ability-bar {
-    height: 14px;
+    height: 17px;
     background: #007bff;
     border-radius: 3px;
 }
 
 .ability-per{
-    height: 14px;
+    height: 17px;
     background: #082f51;
     border-radius: 3px;
     position: relative;
     animation: fillBars 2.5s 1;
+    animation-delay: 5s;
 }
 
 .ability-per::before{
     content: attr(per);
     position: absolute;
     padding: 4px 6px;
-    background: #fff;
+    background: #082f51;
     border-radius: 4px;
     font-size: 12px;
     top: -35px;
@@ -277,8 +274,8 @@ section .title::after{
     position: absolute;
     width: 10px;
     height: 10px;
-    background: #f4f4f4;
-    top: -20px;
+    background: #082f51;
+    top: -15px;
     right: 0;
     transform: translateX(50%) rotate(45deg);
     border-radius: 2px;
@@ -301,31 +298,29 @@ section .title::after{
     text-align: center; 
     display: flex; 
     justify-content: center; 
-    align-items: center; /* Centralizando verticalmente */
+    align-items: center; 
 }
 
-
-/* Estilo para as setas */
 .column.left {
-    display: flex; /* Flexbox para alinhar as setas */
-    flex-direction: column; /* Alinha as setas verticalmente */
-    align-items: flex-start; /* Alinha as setas à esquerda */
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
 }
 
 .column.left p {
-    position: relative; /* Posição relativa para as setas */
-    padding-left: 30px; /* Espaçamento à esquerda para o texto */
-    text-align: left; /* Alinhamento do texto à esquerda */
+    position: relative; 
+    padding-left: 30px; 
+    text-align: left; 
 }
 
 .column.left p::before {
     content: "";
-    background-image: url('img/seta.png'); /* URL da sua imagem */
+    background-image: url('img/seta.png');
     background-size: cover;
-    width: 17px; /* Largura da imagem */
-    height: 17px; /* Altura da imagem */
-    display:inline-block; /* Para a imagem aparecer */
-    margin-right: 10px; /* Espaçamento à direita da seta */
+    width: 17px; 
+    height: 17px; 
+    display:inline-block; 
+    margin-right: 10px; 
 }
 
 /*Sessão Mural */
@@ -376,13 +371,13 @@ img {
     margin-left: 30px;
 }
 
-.contact .contact-content-left a {
+.contact .contact-content a {
     text-decoration: none;
     color: #333; 
     font-weight:normal; 
 }
 
-.contact-content-left a:hover {
+.contact-content a:hover {
     text-decoration: underline; 
     color: #0056b3;
 }

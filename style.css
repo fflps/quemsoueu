@@ -229,8 +229,8 @@ section .title::after{
 
 
 .ability-name {
-    color: #333; /* Cor do título */
-    margin-bottom: 40px; /* Espaçamento inferior */
+    color: #fff; 
+    margin-bottom: 40px; 
 }
 
 .ability-content .ability-name {
@@ -253,6 +253,7 @@ section .title::after{
     background: #082f51;
     border-radius: 3px;
     position: relative;
+    color: #fff;
     animation: fillBars 2.5s 1;
     animation-delay: 5s;
 }
@@ -377,10 +378,6 @@ img {
     font-weight:normal; 
 }
 
-.contact-content a:hover {
-    text-decoration: underline; 
-    color: #0056b3;
-}
 
 .contact .contact-content .row .info .head{
     font-weight: 500;
@@ -404,20 +401,6 @@ img {
 .contact .rigth form .textarea{
     width: 100%;
     height: 80px;
-}
-
-.contact .contact-content .arrow-link {
-    content: "";
-    background-image: url('img/seta.png'); /* URL da sua imagem */
-    background-size: cover;
-    width: 17px; /* Largura da imagem */
-    height: 17px; /* Altura da imagem */
-    display:inline-block; /* Para a imagem aparecer */
-    margin-left: 10px; /* Espaçamento à direita da seta */
-}
-
-.contact .contact-content .arrow-link:hover {
-    background-position: left center;
 }
 
 /*scrool */
